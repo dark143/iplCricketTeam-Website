@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Welcome | IPL CRICKET TEAM</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+
+    </head>
+    <body style="background-color: tomato" id="info"> 
+        <form >
+            <input type="text" placeholder="" name="search" id="myInput" onkeyup="searchFun()">
+            <button type="submit">
+                
+                <i class="material-icon">search</i></button>
+</form> 
+        
+                   <div class="container ">
+                       <div class="row text-center row_style" >
+                           <div class="col-sm-4">
+                               <a href="mi.html" >
+                                   <div class="thumbnail">
+                                      <img src="img/mi2.jpeg" alt="">
+                                      <div class="caption">
+                                  <button class="btn btn-primary">Click</button>
+                                </div>
+                            </div> 
+                        </a>
+                    </div>
+                     <div class="col-sm-4">
+                        <a href="csk.html" >
+                            <div class="thumbnail">
+                                <img src="img/csk2.jpeg" alt="">
+                                <div class="caption">
+                                  <button class="btn btn-primary">Click</button>
+                                </div>
+                            </div> 
+                        </a>
+                    </div>
+                      <div class="col-sm-4">
+                        <a href="rr.html" >
+                            <div class="thumbnail">
+                                <img src="img/raja.jpeg" alt="">
+                                <div class="caption">
+                                  <button class="btn btn-primary">Click</button>
+                                </div>
+                            </div> 
+                        </a>
+                    </div>
+                       <!--    <div class="col-sm-4">
+                        <a href="" >
+                            <div class="thumbnail">
+                                <img src="img/bang.jpeg" alt="">
+                                <div class="caption">
+                                  <button class="btn btn-primary">Click</button>
+                                </div>
+                            </div> 
+                        </a>
+                    </div>
+                           <div class="col-sm-4">
+                        <a href="" >
+                            <div class="thumbnail">
+                                <img src="img/king11.jpeg" alt="">
+                                <div class="caption">
+                                  <button class="btn btn-primary">Click</button>
+                                </div>
+                            </div> 
+                        </a>
+                    </div>
+                           <div class="col-sm-4">
+                        <a href="" >
+                            <div class="thumbnail">
+                                <img src="img/delhi.jpeg" alt="">
+                                <div class="caption">
+                                  <button class="btn btn-primary">Click</button>
+                                </div>
+                            </div> 
+                        </a>
+                    </div>
+                       </div>
+                   </div>-->
+        <script>
+            function seachFun()
+            {
+                let filter=document.getElementById('myInput').value.toUpperCase();
+                
+                let body=document.getElementById('info');
+                let container=body.getElementsByTagClass('container');
+                
+                for( var i=1; i<body.length; i++){
+                    
+                    let thumbnail = container[i].getElementByTagClass('thumbnail')[0];
+                    if(thumbnail){
+                        let textvlaue =thumbnail.textContent || thumbnail.innerHTML;
+                        
+                        if(textvlaue.toUpperCase().indexof(filter) >-1){
+                            container[1].style.display = " ";
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
